@@ -1,0 +1,212 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/0E0D140F-D1A7-3841-9F40-A1B8BC2CA658/main.js" charset="UTF-8"></script><script language="JavaScript" type="text/javascript" src="/comun/js/functions.js"></script>
+	<link rel="shortcut icon" href="/comun/imagenes/template/favicon.ico">
+	<link href="/comun/css/global.css" rel="stylesheet" type="text/css">
+	<link href="/comun/css/iteso_styles.css" rel="stylesheet" type="text/css">
+	<link href="/comun/css/menu.css" rel="stylesheet" type="text/css">
+	<link href="/comun/css/main.css" rel="stylesheet" type="text/css">
+	<title>ITESO, Datos Personales</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<style>
+		li{text-align:justify; margin-bottom:13px;}
+		#firmar, .checa { cursor:pointer;}
+		.mobile-header { padding: 0 0 0 10px;}
+		#content a { color: #337ab7; }
+		.ui-state-active input[type=radio].checa{ z-index: -1; }
+	</style>
+	<script type="text/javascript" src="jquery/js/jquery-1.5.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+		  $('#formaAcuerdo .checa').click(function(){	
+				//alert('Handler for .submit() called.');
+				var dataString = 'deAcuerdo='+ $(this).val();
+				$.ajax({ 
+				 type: "POST", 
+				 url: "sesionAcuerdo.jsp", 
+				 data: dataString,  
+				});
+			});
+			
+		  $("#firmar").click(function() {
+				// validate and process form here 
+				var check1 = document.getElementById('deAcuerdo_0').checked;
+				var check2 = document.getElementById('deAcuerdo_1').checked;
+				var username = document.getElementById('j_username').value;
+				var password = document.getElementById('j_password').value;
+				 
+				if( (!check1 && !check2) || username == '' || password == '' ){
+					alert('Aseg\u00farate de proveernos los datos requeridos ');
+				}
+				else{
+					$("#formaFirma").submit();
+				 } 
+		  });
+		});
+		function toggleRadio(element, element2, bulletActive, bulletNone){
+			var list_class = element.parentElement.classList;
+			var el2 = document.getElementById(element2);
+			var b0 = document.getElementById(bulletActive);
+			var b1 = document.getElementById(bulletNone);
+			
+			if(list_class.contains('ui-state-active')){
+				list_class.remove('ui-state-active');
+				element.classList.remove('ui-icon-bullet');
+				element.classList.add('ui-icon-blank');
+				b0.classList.add('hide');
+
+				el2.parentElement.classList.add('ui-state-active');
+				el2.classList.add('ui-icon-bullet');
+				el2.classList.remove('ui-icon-blank');
+				b1.classList.remove('hide');
+			}else{
+				list_class.add('ui-state-active');
+				element.classList.add('ui-icon-bullet');
+				element.classList.remove('ui-icon-blank');
+				b0.classList.remove('hide');
+
+				el2.parentElement.classList.remove('ui-state-active');
+				el2.classList.remove('ui-icon-bullet');
+				el2.classList.add('ui-icon-blank');
+				b1.classList.add('hide');
+			}
+		}
+		function stateFocus(element){
+			element.classList.add('ui-state-focus');
+		}
+		function stateFocusOut(element){
+			element.classList.remove('ui-state-focus');
+		}
+	</script>
+</head>
+
+<body>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<div id="wrapper">
+	<div class="row">
+		<div class="col-xs-12 columns" >
+			<div class="mobile-header no-menu visible-sm ShadowEffect">
+				<div class="logo60">
+					<a href="http://www.iteso.mx"></a> 
+				</div>
+			</div>
+			<div id="content" class="row bg-white">
+				<div class="portlet-layout row">
+					<div class="aui-w100 portlet-column portlet-column-only Container100 Responsive100" >
+						<div class="portlet-dropzone portlet-column-content portlet-column-content-only Card ShadowEffect ui-fluid" >
+							<header class="portlet-topper module-head" >
+								
+							</header>
+							<div class="portlet-content"> 
+								<div class=" portlet-content-container" style="">
+									<div class="portlet-body">
+		<p align="center"><strong>ITESO</strong><br><strong>AVISO DE PRIVACIDAD &Uacute;NICO</strong></p>
+		<p align="center">Para todos los miembros de la comunidad universitaria (alumnos, personal acad&eacute;mico y de servicios de apoyo, miembros del Equipo de Jesuitas y miembros de los Consejos de Directores y de Vigilancia de ITESO, AC.), aspirantes a alumnos, jubilados, proveedores, arrendatarios y comisionistas del ITESO.</p>
+		<p align="justify">El ITESO recab&oacute; tus datos personales y personales sensibles en diferentes instancias. Resguardar&aacute; la privacidad de dichos datos por medio de su guarda, custodia y gesti&oacute;n en archivos f&iacute;sicos, electr&oacute;nicos y bases de datos de la instituci&oacute;n y durante el tiempo que sea necesario para cumplir con los deberes legales derivados de la prestaci&oacute;n y gesti&oacute;n de los servicios educativos.</p>
+		<p align="justify">Las finalidades concretas para el tratamiento de sus datos, se especifican a continuaci&oacute;n:</p>
+		<ul style="color: #000000;">
+			<li style="list-style-type: disc;"><strong>Aspirantes a alumnos, alumnos; y otros receptores de servicios escolares y educativos:</strong> ITESO recab&oacute; y recabar&aacute; tus datos personales y personales sensibles como aspirante a alumno o alumno inscrito con el fin de identificarte a ti, en su caso, a tus padres, tutores y avales; domicilios, n&uacute;meros telef&oacute;nicos; corroborar tu nivel de estudios, inscribirte en los programas de educaci&oacute;n superior y prestarte todos o alguno de los siguientes servicios: de educaci&oacute;n superior, posgrados, diplomados, seminarios, simposios, o congresos; de formaci&oacute;n humana, del centro y laboratorio de lenguas; salud escolar individual, sanidad e higiene institucional, servicios de planeaci&oacute;n, documentaci&oacute;n, tramitaci&oacute;n, informaci&oacute;n y desarrollo escolares; de titulaci&oacute;n, de informaci&oacute;n acad&eacute;mica biblioteca, servicios de tesorer&iacute;a, de financiamiento educativo, becas, de infraestructura y soporte inform&aacute;tico, servicios de talleres y laboratorios, bolsa de trabajo, infraestructura y organizaci&oacute;n  deportiva, asesor&iacute;a sicol&oacute;gica, enfermer&iacute;a, estacionamiento controlado y servicios de apoyo inform&aacute;tico para dise&ntilde;ar y operar proyectos de servicios comunitarios, prestados por y entre los miembros de la comunidad universitaria. El ITESO podr&aacute; usar tus datos personales y personales sensibles recabados, para intercambiar informaci&oacute;n con otras instituciones educativas del Sistema Universitario Jesuita (SUJ) nacional e internacional o con aquellas nacionales o extranjeras con las que el ITESO mantenga convenios de colaboraci&oacute;n o intercambios acad&eacute;micos.</li>
+			
+			<li style="list-style-type: disc;"><strong>Miembros del Equipo de Jesuitas y de los Consejos de Directores y de Vigilancia de ITESO, AC. Personal acad&eacute;mico y de servicios de apoyo. Prestadores de servicios profesionales y jubilados:</strong> ITESO recab&oacute; tus datos personales y personales sensibles para los fines de identificaci&oacute;n y direcci&oacute;n institucional, adscripci&oacute;n y contrataci&oacute;n de tus servicios profesionales o laborales, la administraci&oacute;n y gesti&oacute;n de dichos contratos, honorarios, salarios y pensiones; as&iacute; como, para la gesti&oacute;n de la organizaci&oacute;n del trabajo, capacitaci&oacute;n laboral, seguridad social y provisi&oacute;n de prestaciones sociales laborales; jubilaciones, fondo de ahorro, caja de ahorro, e informaci&oacute;n fiscal y laboral; para gesti&oacute;n de la seguridad interna, salud laboral individual, sanidad e higiene institucional, y estacionamiento controlado. El ITESO podr&aacute; tratar tus datos personales y personales sensibles para proporcionar referencias laborales y acad&eacute;micas a las instituciones de educaci&oacute;n superior, nacionales o extranjeras que lo soliciten; para realizar reclutamiento y selecci&oacute;n de personal; para realizar estudios y encuestas sobre educaci&oacute;n superior, empleo, ocupaci&oacute;n, o laborales; para realizar proyectos educativos y podr&aacute; hacer transferencias nacionales e internacionales de tus datos para los mismos prop&oacute;sitos.</li>
+			
+			<li style="list-style-type: disc;"><strong align="justify">Egresados:</strong> ITESO recab&oacute; y recabar&aacute; tus datos personales y personales sensibles con el fin de identificarte, actualizar tus datos, corroborar tu nivel de estudios, ubicar tu centro de trabajo o actividad profesional, promover los posgrados, diplomados o seminarios; y prestarte alguno de los siguientes servicios: de formaci&oacute;n humana, del centro y laboratorio de lenguas; de titulaci&oacute;n, de informaci&oacute;n acad&eacute;mica biblioteca; de seguridad interna, estacionamiento controlado, infraestructura deportiva disponible, enfermer&iacute;a y servicios de apoyo inform&aacute;tico para dise&ntilde;ar y operar proyectos de servicios comunitarios, prestados por y entre los miembros de la comunidad universitaria. El ITESO podr&aacute; usar tus datos personales y personales sensibles recabados, para intercambiar informaci&oacute;n escolar y acad&eacute;mica con otras instituciones educativas del Sistema Universitario Jesuita (SUJ) nacional e internacional; bolsa de trabajo; dar a conocer cursos, conferencias y eventos sociales y culturales.</li>
+			
+			<li style="list-style-type: disc;"><strong>Prestadores de servicios, arrendatarios, proveedores y comisionistas:</strong> ITESO recab&oacute; tus datos personales y personales sensibles como prestador de servicios, arrendatario, proveedor o comisionista, con el fin de identificarte y acreditar tu personalidad, actualizar tus datos, ubicar tu domicilio personal, empresarial o profesional y prestarte los servicios de seguridad interna, estacionamiento controlado e infraestructura f&iacute;sica y equipamiento. El ITESO podr&aacute; usar tus datos personales y personales sensibles recabados, para intercambiar informaci&oacute;n personal o de negocios en general con otras personas, para corroborar solvencia, aptitudes, capacitaci&oacute;n, competencias y transferir tus datos a terceros interesados para recomendaciones de negocios.</li>
+		</ul>
+		
+		<p align="justify">Adem&aacute;s de las finalidades espec&iacute;ficas se&ntilde;aladas, el ITESO podr&aacute; tratar tus datos para dar a conocer cursos, conferencias, eventos sociales y culturales; distribuir, difundir y comercializar sus propias publicaciones universitarias impresas y electr&oacute;nicas; divulgar promocionales, publicidad y programas de informaci&oacute;n institucional. Asimismo, los podr&aacute; usar para otros prop&oacute;sitos institucionales compatibles con la Misi&oacute;n y los fines del ITESO.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		<p align="justify"><strong>Derechos ARCO:</strong></p>
+		<p align="justify">El ITESO informa a todos ustedes, que tienen los derechos de ACCESO, RECTIFICACI&Oacute;N, CANCELACI&Oacute;N y OPOSICI&Oacute;N respecto de sus datos personales y personales sensibles que recab&oacute; y resguarda el ITESO y en el caso que desees ejercerlos, ser&aacute;s atendido personalmente o mediante escrito f&iacute;sico o electr&oacute;nico (marthaa@iteso.mx), en la oficina del Director de Administraci&oacute;n y Finanzas por MARTHA &Aacute;LVAREZ CASTA&Ntilde;EDA en horas h&aacute;biles y conforme a las prevenciones y requisitos establecidos en el Cap&iacute;tulo IV de la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares en vigor. (Edificio central, tel&eacute;fono 3669-3570).</p>
+		<p align="justify"> <strong>Modificaciones al aviso de privacidad.</strong></p>
+		<p align="justify">El ITESO te dar&aacute; a conocer los cambios que se originen en el contenido del aviso de privacidad, tanto la parte general, como la especial que corresponda, por esta misma p&aacute;gina, o por los medios institucionales de comunicaci&oacute;n con la comunidad universitaria: <a href="http://cruce.iteso.mx/" target="_blank">http://cruce.iteso.mx/</a>, <a href="http://tablero.iteso.mx" target="_blank">http://tablero.iteso.mx</a> y <a href="https://www.iteso.mx" target="_blank">https://www.iteso.mx</a>.</p>
+		<p align="justify"><strong>Consentimiento voluntario y expreso de alumnos, egresados o personal acad&eacute;mico o de servicios de apoyo:</strong></p>
+		<p align="justify">Si eres alumno, egresado o personal del ITESO, podr&aacute;s otorgar o revocar tu consentimiento voluntario y expreso a este aviso de privacidad, al firmar electr&oacute;nicamente mediante el ingreso de tu nombre de usuario y contrase&ntilde;a:</p>
+		
+		<form id="formaAcuerdo" action="/sesionAcuerdo.jsp" method="post" enctype="application/x-www-form-urlencoded" name="formaAcuerdo">
+			<div id="selectRadio_0" class="ui-selectoneradio ui-widget ui-grid ui-grid-responsive" style="margin:30px 0px;">
+				<div class="ui-grid-row">
+					<div class="ui-radiobutton ui-widget">
+						<div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default" style="border: solid 2px #26C6DA;" >
+							<input name="deAcuerdo" type="radio" id="deAcuerdo_0" value="O" class="checa ui-radiobutton-icon ui-icon ui-icon-blank ui-c" onChange="toggleRadio(this,'deAcuerdo_1','bullet0','bullet1');" >
+							<span id="bullet0" class="ui-radiobutton-icon ui-icon ui-c ui-icon-bullet hide" style="margin: -2px !important;"></span>
+						</div>
+					</div>
+					<label for="deAcuerdo_0" style="text-align: justify;color:black !important;"><strong>S&Iacute;</strong> estoy de acuerdo con la parte general del aviso de privacidad y con las finalidades espec&iacute;ficas del tratamiento de mis datos personales y personales sensibles.</label>
+				</div>
+				<div class="ui-grid-row">
+					<div class="ui-radiobutton ui-widget">
+						<div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default" style="border: solid 2px #26C6DA;" >
+							<input type="radio" name="deAcuerdo" value="R" id="deAcuerdo_1" class="checa ui-radiobutton-icon ui-icon ui-c ui-icon-blank" onChange="toggleRadio(this,'deAcuerdo_0','bullet1','bullet0');">
+							<span id="bullet1" class="ui-radiobutton-icon ui-icon ui-c ui-icon-bullet hide" style="margin: -2px !important;"></span>
+						</div>
+					</div>
+					<label for="deAcuerdo_1" style="text-align: justify;color:black !important;"><strong>NO</strong> estoy de acuerdo con la parte general del aviso de privacidad ni con las finalidades espec&iacute;ficas del tratamiento de mis datos personales y personales sensibles.</label>
+				</div>
+			</div>
+		</form>
+		<form id="formaFirma" action="j_security_check" method="post" enctype="application/x-www-form-urlencoded" name="formaFirma">
+
+			<table border="0" cellpadding="3" cellspacing="1">
+				<tr>
+					<td style="width: 85px;">Usuario:</td>
+					<td style="width: 250px;">
+						<span style="position: relative;display: inline-block;width: 100%;">
+							<input id="j_username" name="j_username" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" style="padding-right: 75px !important;" role="textbox" aria-disabled="false" aria-readonly="false" onfocus="stateFocus(this)" onblur="stateFocusOut(this)" >
+							<span style="color:#004270; font-weight:bold;position: absolute;top: 9px;right: 0px;display: inline-block;text-align: center;"> @iteso.mx</span>
+						</span>
+					</td>
+				</tr>
+				<tr style="height: 15px;"></tr>
+				<tr>
+					<td style="width: 85px;">Contrase&ntilde;a: </td>
+					<td style="width: 250px;">
+						<span style="position: relative;display: inline-block;width: 100%;">
+							<input id="j_password" name="j_password" type="password" class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" onfocus="stateFocus(this)" onblur="stateFocusOut(this)" >
+						</span>
+					</td>
+				</tr>
+				<tr style="height: 30px;"></tr>
+				<tr >
+					<td colspan="2" style="text-align: center;">
+						<button id="firmar" name="Button" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="width:auto" role="button" aria-disabled="false">
+							<span class="ui-button-text ui-c">Firmar</span>
+						</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+			<!--<p align="center">INSTITUTO TECNOL&Oacute;GICO Y DE ESTUDIOS SUPERIORES DE OCCIDENTE, A. C. Perif&eacute;rico Sur Manuel G&oacute;mez Mor&iacute;n 8585. Tlaquepaque, Jalisco. Tel&eacute;fonos: (33) 3669 3434 y (33) 3669 3435. </p>-->
+
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="button" value="Say hello" onclick="showAndroidToast('Hello Android!')"/>
+	<script type="text/javascript">
+		function showAndroidToast(toast) {
+			Android.showToast(toast);
+		}
+	</script>
+</div>
+<footer id="footer" role="contentinfo">
+	<div class="row cr">
+		<div class="col-xs-12 columns" style="text-align: center;color: black;font-weight: bold;">
+			<p>INSTITUTO TECNOL&Oacute;GICO Y DE ESTUDIOS SUPERIORES DE OCCIDENTE, A. C.<br>Perif&eacute;rico Sur Manuel G&oacute;mez Mor&iacute;n 8585. Tlaquepaque, Jalisco.<br>Tel&eacute;fonos: (33) 3669 3434 y (33) 3669 3435.</p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

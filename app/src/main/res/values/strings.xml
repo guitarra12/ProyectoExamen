@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProyectoExamen</string>
+    <string name="title_section1">Technology</string>
+    <string name="title_section2">Home</string>
+    <string name="title_section3">Electronics</string>
+
+    <string-array name="products_array">
+        <item>Alienware</item>
+        <item>Mac</item>
+    </string-array>
+
+</resources>
